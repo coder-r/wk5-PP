@@ -1,0 +1,22 @@
+<h1>Add Product</h1>
+
+<form action="/inventory/product" method="post">
+
+  <label for="product-name">Name: </label>
+  <input id="product-name" type="text" name="product_name">
+
+  <label for="description">Description: </label>
+  <input id="description" type="text" name="description">
+
+  <label for="stock">Stock: </label>
+  <input id="stock" type="number" min="0" name="stock">
+
+  <label for="buying-cost">Buying Cost: £</label>
+  <input id="buying-cost" type="number" name="buying_cost">
+
+  <label for="selling-price">Selling Price: £</label>
+  <input id="selling-price" type="number" name="selling_price">
+
+  <input type="submit" value="Add">
+
+</form>

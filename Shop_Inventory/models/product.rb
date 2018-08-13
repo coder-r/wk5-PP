@@ -79,4 +79,11 @@ class Product
     return Product.new(products.first)
   end
 
+  def stock_check ()
+    if @stock == 0
+      return 'out_of_stock'
+    end
+    return @stock > 20 ? 'in_stock' : 'low_stock'
+  end
+
 end

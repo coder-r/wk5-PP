@@ -1,0 +1,35 @@
+<h1>Edit Product</h1>
+
+<form action="/inventory/product/<%= @product.id %>" method="post">
+
+  <label for="product-name">Name: </label>
+  <input id="product-name" type="text" name="product_name" value="<%= @product.product_name() %>">
+
+  <label for="description">Description: </label>
+  <input id="description" type="text" name="description" value="<%= @product.description() %>">
+
+  <label for="stock">Stock: </label>
+  <input id="stock" type="number" min="0" name="stock" value="<%= @product.stock() %>">
+
+  <label for="buying-cost">Buying Cost: £</label>
+  <input id="buying-cost" type="number" name="buying_cost" value="<%= @product.buying_cost() %>">
+
+  <label for="selling-price">Selling Price: £</label>
+  <input id="selling-price" type="number" name="selling_price" value="<%= @product.selling_price() %>">
+
+  <label for="manufacturer-select">Manufacturer: </label>
+  <!-- start of drop down -->
+  <select id="manufacturer-select" name="manufacturer_id">
+    <option selected value="<%= @product.manufacturer_id %>">
+    <%= @product.manufacturer().manufacturer_name() %></option>
+    <% @manufacturers.each do |manufacturer| %>
+    <% if manufacturer.id != @product.manufacturer_id %>
+      <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
+    <% end %>
+    <%end%>
+  </select>
+  <!-- end of dropdown -->
+
+  <input type="submit" value="Submit">
+
+</form>

@@ -6,7 +6,7 @@ CREATE TABLE manufacturers (
   manufacturer_name VARCHAR (255),
   lead_time INT,
   email VARCHAR (255),
-  contact_number varchar(15)
+  contact_number VARCHAR(15)
 );
 
 CREATE TABLE products (
