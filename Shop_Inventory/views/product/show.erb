@@ -1,10 +1,26 @@
 <h1 style="text-align: center;">Product Details</h1>
 
-<p>Name: <%= @product.product_name()%></p>
-<p>Description: <%= @product.description() %></p>
-<p>Stock: <%= @product.stock() %> </a></p>
-<p>Buying Cost <%= @product.buying_cost() %></p>
-<p>Selling Price: <%= @product.selling_price() %></p>
+<table>
+  <td>Name:</td>
+  <td><%= @product.product_name()%></td>
+  </tr>
+  <tr>
+  <td>Description:</td>
+  <td><%= @product.description() %></td>
+  </tr>
+  <tr>
+  <td>Stock:</td>
+  <td><%= @product.stock() %> </td>
+  </tr>
+  <tr>
+  <td>Buying Cost</td>
+  <td><%= @product.buying_cost() %></td>
+  </tr>
+  <tr>
+  <td>Selling Price</td>
+  <td><%= @product.selling_price() %></td>
+  </tr>
+</table>
 
 <form action="/inventory/product/<%= @product.id %>/edit" method="get">
   <input type="submit" value="Edit Product">

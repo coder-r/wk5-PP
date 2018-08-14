@@ -77,7 +77,7 @@ product5 = Product.new(
   {
     'product_name' => "Jalfrezi",
     'description' => "Jalfrezi is the legacy of Bengali cooks who made satisfying stir-fries from leftovers. Its bright flavor comes from tomato, garam masala and sweet red peppers.",
-    'stock' => 9,
+    'stock' => 0,
     'buying_cost' => 5.10,
     'selling_price' => 6.50,
     'manufacturer_id' => manufacturer1.id

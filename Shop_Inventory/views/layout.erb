@@ -5,12 +5,12 @@
   <title>Food Shop Inventory</title>
   <link href="/styles/style.css" type="text/css" rel="stylesheet">
 </head>
-<body background = "images/background.jpg">
-  <ul>
-    <li><><a href="/inventory"> Inventory </a></strong></li>
-    <li><strong><a href="/inventory/product/add-product">Add Product</a></strong></li>
-    <li><strong><a href="/inventory/manufacturer/add-manufacturer">Add Manufacturer</a></strong></li>
-  </ul>
+<body background="images/background.jpg">
+  <div class="topnav">
+    <a class="active" href="/inventory"> Inventory</a>
+    <a href="/inventory/product/add-product">Add Product</a>
+    <a href="/inventory/manufacturer/add-manufacturer">Add Manufacturer</a>
+  </div>
   <%= yield %>
 </body>
 </html>
