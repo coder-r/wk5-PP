@@ -1,4 +1,4 @@
-<h1>Add Product</h1>
+<h1 style="text-align: center;">Add Product</h1>
 
 <form action="/inventory/product" method="post">
 
@@ -12,10 +12,17 @@
   <input id="stock" type="number" min="0" name="stock">
 
   <label for="buying-cost">Buying Cost: £</label>
-  <input id="buying-cost" type="number" name="buying_cost">
+  <input id="buying-cost" type="number" step="0.01" name="buying_cost">
 
   <label for="selling-price">Selling Price: £</label>
-  <input id="selling-price" type="number" name="selling_price">
+  <input id="selling-price" type="number" step="0.01" name="selling_price">
+
+  <label for="manufacturer-select">Select A Manufacturer: </label>
+  <select id="manufacturer-select" name="manufacturer_id">
+    <% @manufacturers.each do |manufacturer| %>
+    <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
+    <%end%>
+  </select>
 
   <input type="submit" value="Add">
 

@@ -1,7 +1,15 @@
-<h1>Products</h1>
+<h1 style="text-align: center;">Product Details</h1>
 
 <p>Name: <%= @product.product_name()%></p>
 <p>Description: <%= @product.description() %></p>
-<p>Stock: <a class="<%= @product.stock_check()%>"> <%= @product.stock() %> </a></p>
+<p>Stock: <%= @product.stock() %> </a></p>
 <p>Buying Cost <%= @product.buying_cost() %></p>
 <p>Selling Price: <%= @product.selling_price() %></p>
+
+<form action="/inventory/product/<%= @product.id %>/edit" method="get">
+  <input type="submit" value="Edit Product">
+</form>
+
+<form action="/inventory/product/<%= @product.id %>/delete" method="post">
+  <input type="submit" value="Delete Full Product Listing">
+</form>

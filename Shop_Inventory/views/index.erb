@@ -1,4 +1,4 @@
-<h1>Inventory</h1>
+<h1 style="text-align: center;">Shop Inventory</h1>
 
 <table>
   <tr>
@@ -6,14 +6,16 @@
     <th>Manufacturer</th>
     <th>Stock</th>
     <th>Price</th>
+    <th>Stock Status</th>
     <th>Description</th>
   </tr>
   <% @products.each do |product| %>
   <tr>
     <td> <a href="/inventory/product/<%= product.id %>"> <%= product.product_name() %></a></td>
-    <td> <%= product.manufacturer().manufacturer_name()%></td>
+    <td> <a href="/inventory/manufacturer/<%= product.manufacturer().id %>"> <%= product.manufacturer().manufacturer_name() %></td>
     <td><%= product.stock() %></td>
     <td>£<%= product.selling_price %></td>
+    <td><%= product.stock_check %></td>
     <td> <%= product.description %></td>
   </tr>
   <% end %>

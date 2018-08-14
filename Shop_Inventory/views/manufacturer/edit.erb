@@ -1,0 +1,22 @@
+<h1 style="text-align: center;">Modify Manufacturer</h1>
+
+<form action="/inventory/manufacturer/<%= @manufacturer.id %>" method="post">
+
+  <label for="manufacturer-name">Name: </label>
+  <input id="manufacturer-name" type="text" name="manufacturer_name" value="<%= @manufacturer.manufacturer_name() %>">
+
+  <label for="lead-time">Lead Time: </label>
+  <input id="lead-time" type="text" name="lead_time" value="<%= @manufacturer.lead_time() %>">
+
+  <label for="email">Email: </label>
+  <input id="email" type="text" name="email" value="<%= @manufacturer.email() %>">
+
+  <label for="contact-number">Contact Number: </label>
+  <input id="contact-number" type="text" name="contact_number" value="<%= @manufacturer.contact_number() %>">
+
+
+  <input type="submit" value="Update">
+
+
+
+</form>

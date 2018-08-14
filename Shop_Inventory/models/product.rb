@@ -81,9 +81,9 @@ class Product
 
   def stock_check ()
     if @stock == 0
-      return 'out_of_stock'
+      return "Out of Stock"
     end
-    return @stock > 20 ? 'in_stock' : 'low_stock'
+    return @stock > 20 ? "In Stock" : "Low Stock"
   end
 
 end

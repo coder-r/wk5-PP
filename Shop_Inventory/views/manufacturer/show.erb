@@ -1,0 +1,15 @@
+<h1 style="text-align: center;">Manufacturer</h1>
+
+<p>Name: <%= @manufacturer.manufacturer_name() %></p>
+<p>Lead Time: <%= @manufacturer.lead_time() %></p>
+<p>Email: <%= @manufacturer.email() %></p>
+<p>Contact Number: <%= @manufacturer.contact_number() %></p>
+
+
+<form action="/inventory/manufacturer/<%= @manufacturer.id %>/edit" method="get">
+  <input type="submit" value="Update Manufacturer">
+</form>
+
+<form action="/inventory/manufacturer/<%= @manufacturer.id %>/delete" method="post">
+  <input type="submit" value="Delete Manufacturer">
+</form>
