@@ -79,11 +79,18 @@ class Product
     return Product.new(products.first)
   end
 
-  def stock_check ()
+  def stock_check_underscore ()
     if @stock == 0
-      return "Out of Stock"
+      return "Out_of_Stock"
     end
-    return @stock > 20 ? "In Stock" : "Low Stock"
+    return @stock > 20 ? "In_Stock" : "Low_Stock"
   end
+
+def stock_check_no_underscore ()
+  if @stock == 0
+    return "Out of Stock"
+  end
+  return @stock > 20 ? "In Stock" : "Low Stock. Re-Stock required."
+end
 
 end

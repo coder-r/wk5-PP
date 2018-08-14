@@ -1,0 +1,11 @@
+.Low_Stock {
+  background-color: yellow;
+}
+
+.Out_of_Stock {
+  background-color: red;
+}
+
+.In_Stock {
+  background-color: green;
+}

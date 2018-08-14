@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">Shop Inventory</h1>
 
-<table>
+<table class="inventoryTable">
   <tr>
     <th>Product</th>
     <th>Manufacturer</th>
@@ -15,7 +15,7 @@
     <td> <a href="/inventory/manufacturer/<%= product.manufacturer().id %>"> <%= product.manufacturer().manufacturer_name() %></td>
     <td><%= product.stock() %></td>
     <td>£<%= product.selling_price %></td>
-    <td><%= product.stock_check %></td>
+    <td class = "<%= product.stock_check_underscore %>" > <%= product.stock_check_no_underscore %></td>
     <td> <%= product.description %></td>
   </tr>
   <% end %>
