@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Modify Product</h1>
+<h1>Edit Product</h1>
 
 <form action="/inventory/product/<%= @product.id %>" method="post">
 
@@ -17,21 +17,12 @@
   <label for="selling-price">Selling Price: £</label>
   <input id="selling-price" type="number" name="selling_price" value="<%= @product.selling_price() %>">
 
-  <label for="manufacturer-select">Manufacturer: </label>
-    <!-- start of drop down -->
-    <select id="manufacturer-select" name="manufacturer_id">
-      <option selected value="<%= @product.manufacturer_id %>">
-     <!-- highlight the selected option -->
-      <%= @product.manufacturer().manufacturer_name() %></option>
-     <!-- looping through the manufacturers array -->
-      <% @manufacturers.each do |manufacturer| %>
-     <!-- checking for the selected manufacturer id -->
-      <% if manufacturer.id != @product.manufacturer_id %>
-        <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
-      <% end %>
-      <%end%>
-    </select>
-    <!-- end of dropdown -->
+  <label for="manufacturer-select">Select A Manufacturer: </label>
+  <select id="manufacturer-select" name="manufacturer_id">
+    <% @manufacturers.each do |manufacturer| %>
+    <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
+    <%end%>
+  </select>
 
-    <input type="submit" value="Submit Update">
+    <input type="submit" value="Update">
 </form>

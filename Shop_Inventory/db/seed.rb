@@ -44,7 +44,7 @@ product2 = Product.new(
   {
     'product_name' => "Madras Curry",
     'description' => "The tropical flavors of South India are captured in this zesty sauce from the Chettinad region, near Madras. Deep flavors of black pepper and coriander are balanced with aromatic coconut milk and curry leaves. Make your own authentic Chettinad Chicken or enjoy with lamb, pork or vegetables.",
-    'stock' => 55,
+    'stock' => 9,
     'buying_cost' => 5.30,
     'selling_price' => 6.70,
     'manufacturer_id' => manufacturer2.id

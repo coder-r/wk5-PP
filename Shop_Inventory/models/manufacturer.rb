@@ -10,7 +10,7 @@ class Manufacturer
     @manufacturer_name = options['manufacturer_name']
     @lead_time = options['lead_time'].to_i()
     @email = options['email']
-    @contact_number = options['phone_number']
+    @contact_number = options['contact_number']
   end
 
   def save()
